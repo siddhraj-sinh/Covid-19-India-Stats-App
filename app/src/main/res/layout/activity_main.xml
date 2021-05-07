@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#d8e3e7"
+    android:background="#e5e5e5"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -26,6 +26,130 @@
             />
     </com.google.android.material.appbar.AppBarLayout>
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="22dp"
+        app:cardBackgroundColor="#d8e3e7"
+        app:cardCornerRadius="16dp"
+        android:elevation="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topAppBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/viga"
+                android:gravity="center_horizontal"
+                android:text="Overall India Covid-19 Stats"
+                android:textColor="#0a043c"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/assistant"
+                    android:text="Active Cases:"
+                    android:textColor="#132c33" />
+
+                <TextView
+                    android:id="@+id/tv_ovl_activeCases"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/assistant"
+                    android:gravity="start"
+                    android:text="xxx"
+                    android:textColor="#132c33" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/assistant"
+                    android:text="Recovered Cases:"
+                    android:textColor="#132c33" />
+
+                <TextView
+                    android:id="@+id/tv_ovl_recovered_Cases"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/assistant"
+                    android:gravity="start"
+                    android:text="xxx"
+                    android:textColor="#132c33" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/assistant"
+                    android:text="Death:"
+                    android:textColor="#132c33" />
+
+                <TextView
+                    android:id="@+id/tv_ovl_death_cases"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/assistant"
+                    android:gravity="start"
+                    android:text="xxx"
+                    android:textColor="#132c33" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/assistant"
+                    android:text="Total Cases:"
+                    android:textColor="#132c33" />
+
+                <TextView
+                    android:id="@+id/tv_ovl_total_cases"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/assistant"
+                    android:gravity="start"
+                    android:text="xxx"
+                    android:textColor="#132c33" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
     <ProgressBar
         android:id="@+id/progressbar"
         android:layout_width="wrap_content"
@@ -40,9 +164,10 @@
         android:id="@+id/recyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topAppBar"
+        app:layout_constraintTop_toBottomOf="@id/cardView"
         tools:listitem="@layout/item_stats_view" />
 </androidx.constraintlayout.widget.ConstraintLayout>

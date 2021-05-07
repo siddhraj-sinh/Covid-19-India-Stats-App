@@ -37,6 +37,16 @@ class MainActivity : AppCompatActivity() {
             null,
             Response.Listener {
                 progressbar.visibility = View.GONE
+                //new code start
+                val overallActiveCases = it.getInt("activeCases")
+                val overallRecoveredCases = it.getInt("recovered")
+                val overallDeath = it.getInt("deaths")
+                val overallTotalCases = it.getInt("totalCases")
+                tv_ovl_activeCases.text=overallActiveCases.toString()
+                tv_ovl_recovered_Cases.text=overallRecoveredCases.toString()
+                tv_ovl_death_cases.text=overallDeath.toString()
+                tv_ovl_total_cases.text=overallTotalCases.toString()
+                //new code end
                 val regionDataJsonArray = it.getJSONArray("regionData")
                 val regionDataArray = ArrayList<CovidData>()
                 for (i in 0 until regionDataJsonArray.length()) {
