@@ -18,4 +18,4 @@ Install App through this drive Link: https://drive.google.com/file/d/1EbaWdyNqlr
 2. Stats API: https://api.apify.com/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect=true.
 3. How to Make Standard Request Using Volley: https://developer.android.com/training/volley/request
 
-<img src="https://user-images.githubusercontent.com/69664213/117403462-d78e2580-af25-11eb-92db-2bc16809a1bd.jpg" width="428" height="1292">
+<img src="https://user-images.githubusercontent.com/69664213/117559949-24e5d080-b0a7-11eb-9c7a-68475750182e.jpg" width="428" height="1292">
