@@ -3,12 +3,13 @@ package com.example.covidstatsindia
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import org.w3c.dom.Text
 
 class StatsAdapter() : RecyclerView.Adapter<StatsViewHolder>() {
-    val items: ArrayList<CovidData> = ArrayList()
+    var items: ArrayList<CovidData> = ArrayList()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StatsViewHolder {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.item_stats_view, parent, false)
@@ -36,7 +37,10 @@ class StatsAdapter() : RecyclerView.Adapter<StatsViewHolder>() {
 
         notifyDataSetChanged()
     }
-
+fun filterList(filterlist: ArrayList<CovidData>){
+  items = filterlist
+  notifyDataSetChanged()
+}
 }
 
 class StatsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
